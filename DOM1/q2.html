@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add List Items</title>
+</head>
+<body>
+
+  <h1>Dynamic List Example</h1>
+
+  <!-- UL with three items -->
+  <ul id="itemList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+  </ul>
+
+  <!-- Button -->
+  <button id="addBtn">Add Item</button>
+
+  <script>
+    // Select ul using querySelector
+    const ul = document.querySelector("#itemList");
+    const button = document.getElementById("addBtn");
+
+    button.addEventListener("click", () => {
+      // Create new li element
+      const li = document.createElement("li");
+
+      // Count existing items to determine sequence number
+      const count = ul.children.length + 1;
+
+      li.textContent = "New Item " + count;
+
+      // Style based on odd/even
+      if (count % 2 === 1) {
+        // Odd -> bold & blue
+        li.style.fontWeight = "bold";
+        li.style.color = "blue";
+      } else {
+        // Even -> italic & red
+        li.style.fontStyle = "italic";
+        li.style.color = "red";
+      }
+
+      // Append li to the ul
+      ul.appendChild(li);
+    });
+  </script>
+
+</body>
+</html>

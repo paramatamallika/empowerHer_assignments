@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive DOM Manipulation</title>
+  <style>
+    #box {
+      width: 300px;
+      padding: 20px;
+      margin-top: 20px;
+      background-color: lightgray;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>L1 - Interactive DOM Manipulation</h1>
+
+  <!-- Input for Color -->
+  <input type="text" id="colorInput" placeholder="Enter color name">
+
+  <!-- Input for Text -->
+  <input type="text" id="textInput" placeholder="Enter new text">
+
+  <!-- Buttons -->
+  <button id="bgBtn">Change Background</button>
+  <button id="textBtn">Update Text</button>
+
+  <!-- Div to update -->
+  <div id="box">This is the initial text inside the div.</div>
+
+  <script>
+    const box = document.getElementById("box");
+    const colorInput = document.getElementById("colorInput");
+    const textInput = document.getElementById("textInput");
+    const bgBtn = document.getElementById("bgBtn");
+    const textBtn = document.getElementById("textBtn");
+
+    // Validate color helper function
+    function isValidColor(color) {
+      const s = new Option().style;
+      s.color = color;
+      return s.color !== "";
+    }
+
+    // Change background color
+    bgBtn.addEventListener("click", () => {
+      const colorValue = colorInput.value.trim();
+
+      if (isValidColor(colorValue)) {
+        box.style.backgroundColor = colorValue;
+      } else {
+        alert("Invalid color name!");
+      }
+    });
+
+    // Update text
+    textBtn.addEventListener("click", () => {
+      const textValue = textInput.value.trim();
+
+      if (textValue === "") {
+        alert("Please enter some text!");
+      } else {
+        box.textContent = textValue;
+      }
+    });
+  </script>
+
+</body>
+</html>

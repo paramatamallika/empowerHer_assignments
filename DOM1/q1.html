@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Basics</title>
+</head>
+<body>
+
+  <h1 id="mainHeading">Original Heading</h1>
+
+ <p>Each element in an HTML page can be accessed and modified through the DOM.</p>
+<p>Developers often use DOM methods to improve user interaction and experience.</p>
+<p>By mastering the basics, you can create dynamic and interactive web pages.</p>
+
+
+  <div class="container">
+    <p>Learning how to navigate this tree is the first step toward mastering web development.</p>
+  </div>
+
+  <script>
+      const heading = document.getElementById("mainHeading");
+    heading.textContent = "Welcome to the DOM World!";
+    const paragraphs = document.getElementsByTagName("p");
+    for (let p of paragraphs) {
+      p.style.color = "blue";
+    }
+
+    const containerDiv = document.querySelector(".container");
+    containerDiv.style.backgroundColor = "yellow";
+  </script>
+
+</body>
+</html>

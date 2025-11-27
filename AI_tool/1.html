@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="1.css" />
+</head>
+<body>
+
+    <header>
+        <div class="logo">MyPortfolio</div>
+
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                ☰
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Hello, I'm <span>mallika</span></h1>
+        <p>A passionate learner & aspiring developer.</p>
+        <a href="#contact" class="btn">Contact Me</a>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">JavaScript</div>
+            <div class="skill-card">Python</div>
+            <div class="skill-card">SQL</div>
+            <div class="skill-card">Git & GitHub</div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Connect with me:</p>
+        <div class="social">
+            <a href="#">LinkedIn</a>
+            <a href="#">GitHub</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-links").classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>

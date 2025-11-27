@@ -1,0 +1,35 @@
+# Responsive Personal Portfolio (HTML + CSS Only)
+
+## ✔ Project Requirement
+This portfolio webpage is created as part of the assignment to build a responsive personal portfolio page using **HTML + CSS only**.
+
+## 🚀 AI Tool Used
+I used **[Lovable.dev]** (or Bolt.new / Cursor AI / Replit AI — choose whichever you actually used).
+
+### AI-Generated Parts
+- Basic HTML structure
+- Initial hero section layout
+- Simple CSS styling
+
+### Manual Improvements Made
+- Fixed responsiveness for all screen sizes
+- Added custom colors & fonts
+- Improved skills grid layout
+- Added hamburger menu for mobile
+- Cleaned & formatted the CSS
+- Updated content, spacing & alignment
+- Ensured zero horizontal scrolling on mobile
+
+## 📁 Project Files
+- `index.html`
+- `style.css`
+- `README.md`
+
+## 📱 Responsive Views
+- Desktop: 3-column skills grid + horizontal nav
+- Tablet: 2-column skills grid
+- Mobile: 1-column skills grid + hamburger menu
+
+---
+
+You can also include screenshots of desktop/tablet/mobile views.
